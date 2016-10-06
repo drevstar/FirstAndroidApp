@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FirstAndroidApp_MorningClass</string>
+    <string name="splashicon">splashIcon</string>
+    <string name="cabernator">Cabernator</string>
+    <string name="by">By</string>
+    <string name="ipoint_isecure">iPoint-iSecure</string>
+    <string name="loading">Loading...</string>
+    <string name="email_address">Email Address</string>
+    <string name="log_in">Log In</string>
+    <string name="password">Password</string>
+    <string name="login_success">Login Success!</string>
+    <string name="login_successful">Login Successful!</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_password">Enter Password</string>
+</resources>
