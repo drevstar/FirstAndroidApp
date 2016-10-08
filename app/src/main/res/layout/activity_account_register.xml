@@ -60,11 +60,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/registerFname"
-        android:layout_alignBottom="@+id/regFnametxt"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/regFnametxt"
-        android:layout_toEndOf="@+id/regFnametxt" />
+        android:layout_above="@+id/regLnametxt"
+        android:layout_alignLeft="@+id/registerLname"
+        android:layout_alignStart="@+id/registerLname"
+        android:layout_alignRight="@+id/buttonBack"
+        android:layout_alignEnd="@+id/buttonBack" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,10 +81,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/registerLname"
         android:layout_alignBottom="@+id/regLnametxt"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/regFnametxt"
-        android:layout_toEndOf="@+id/regFnametxt" />
+        android:layout_toRightOf="@+id/regLnametxt"
+        android:layout_alignRight="@+id/buttonBack"
+        android:layout_alignEnd="@+id/buttonBack" />
 
     <TextView
         android:layout_width="wrap_content"

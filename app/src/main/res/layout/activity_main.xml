@@ -68,10 +68,11 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:id="@+id/textViewRegister"
-        android:layout_marginTop="53dp"
         android:textColor="#ffffff"
+        android:layout_marginTop="54dp"
         android:layout_below="@+id/loginButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/loginButton"
+        android:layout_toEndOf="@+id/loginButton" />
 
     <TextView
         android:layout_width="wrap_content"

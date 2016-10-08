@@ -26,4 +26,9 @@ public class MainMenu extends Activity {
             }
         });
         }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
     }

@@ -15,7 +15,6 @@ import android.widget.Button;
 public class OnTouchActivity extends AppCompatActivity {
 
     EditText x1,x2,y1,y2,xdiff,ydiff,dir,quad;
-    Button backButton;
 
                 @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +30,6 @@ public class OnTouchActivity extends AppCompatActivity {
                 ydiff=(EditText)findViewById(R.id.dy);
                 dir=(EditText)findViewById(R.id.dir);
                 quad=(EditText)findViewById(R.id.quad);
-                    backButton = (Button) findViewById(R.id.buttonBack);
-                    back();
 
 
                         imgView.setOnTouchListener(new View.OnTouchListener() {
@@ -55,17 +52,7 @@ public class OnTouchActivity extends AppCompatActivity {
                                     }
                             });
             }
-    public void back() {
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(v.getContext(), MainActivity.class);
-                startActivityForResult(myIntent, 0);
-                onPause();
-                finish();
-            }
-        });
-    }
+
                 public void display(float inix, float finx, float iniy, float finy){
                 String x = "", y = "";
                 float delx, dely;
@@ -88,32 +75,37 @@ public class OnTouchActivity extends AppCompatActivity {
                         y = "Down";
                     }
 
-                        x1.setText("X1: "+Float.toString(inix));
-                x2.setText("X2: "+Float.toString(finx));
-                y1.setText("Y1: "+Float.toString(iniy));
-                y2.setText("Y2: "+Float.toString(finx));
-                xdiff.setText("Xdifference: "+Float.toString(delx));
-                ydiff.setText("Ydifference: "+Float.toString(dely));
+                        x1.setText("                              X1: "+Float.toString(inix));
+                x2.setText("                              X2: "+Float.toString(finx));
+                y1.setText("                              Y1: "+Float.toString(iniy));
+                y2.setText("                              Y2: "+Float.toString(finx));
+                xdiff.setText("                         Xdifference: "+Float.toString(delx));
+                ydiff.setText("                         Ydifference: "+Float.toString(dely));
 
                         if(x.equals("Right")){
                         if(y.equals("Up")){
-                                dir.setText("Swipe: Right-Up");
-                                quad.setText("Quadrant: 1");
+                                dir.setText("                         Swipe: Right-Up");
+                                quad.setText("                              Quadrant: 1");
                             }else{
-                                dir.setText("Swipe: Right-Down");
-                                quad.setText("Quadrant: 4");
+                                dir.setText("                         Swipe: Right-Down");
+                                quad.setText("                              Quadrant: 4");
                             }
                     }else if(x.equals("Left")){
                         if(y.equals("Up")){
-                                dir.setText("Swipe: Left-Up");
-                                quad.setText("Quadrant: 2");
+                                dir.setText("                         Swipe: Left-Up");
+                                quad.setText("                              Quadrant: 2");
                             }else{
-                                dir.setText("Swipe: Left-Down");
-                                quad.setText("Quadrant: 3");
+                                dir.setText("                         Swipe: Left-Down");
+                                quad.setText("                              Quadrant: 3");
                             }
                     }else{
-                        dir.setText("Swipe: Origin");
-                        quad.setText("Quadrant: 0");
+                        dir.setText("                              Swipe: Origin");
+                        quad.setText("                              Quadrant: 0");
                     }
             }
-    };
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+    }
